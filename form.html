@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- for toggle switch -->
+    <style>
+      .switch {
+      position: relative;
+      display: inline-block;
+      width: 150px;
+      height: 34px;
+      }
+
+      .switch input {display:none;}
+
+      .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ca2222;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+
+      .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+
+      input:checked + .slider {
+      background-color: #2ab934;
+      }
+
+      input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+      -webkit-transform: translateX(115px);
+      -ms-transform: translateX(115px);
+      transform: translateX(115px);
+      }
+
+      /*------ ADDED CSS ---------*/
+      .on
+      {
+      display: none;
+      }
+
+      .on, .off
+      {
+      color: white;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      font-size: 10px;
+      font-family: Verdana, sans-serif;
+      }
+
+      input:checked+ .slider .on
+      {display: block;}
+
+      input:checked + .slider .off
+      {display: none;}
+
+      /*--------- END --------*/
+
+      /* Rounded sliders */
+      .slider.round {
+      border-radius: 34px;
+      }
+
+      .slider.round:before {
+      border-radius: 50%;}
+    </style>
+
+    <!-- My Style -->
+    <style>
+        body{background-color:black;}
+        h1{color:aqua; font-style:italic; font-family: Raleway, "Open Sans", sans-serif;}
+        h2{color:aqua; font-style:italic; font-family: Raleway, "Open Sans", sans-serif;}
+        label{color:aqua; font-style:italic; font-family: Raleway, "Open Sans", sans-serif;}
+        input{color:aqua; font-style:italic; font-family: Raleway, "Open Sans", sans-serif;}
+        p{color:lime; font-family: "Open Sans", sans-serif; font-size: 1.2em;}
+    </style>
+    <title>Form Page</title>
+  </head>
+
+
+
+
+
+
+
+
+
+  <body>
+    <div class="container">
+      <h1>Here you can add a new article to the database</h1>
+      <br>
+      <p>Enter Author and Title</p>
+      <form class= "form-inline">
+        <div class="form-group mr-2">
+          <label class="sr-only" for="inputTitle">Title</label>
+          <input type="title" class="form-control" id="inputTitle" placeholder="Title">
+        </div> 
+        <div class="form-group mr-2">
+            <label class="sr-only" for="inputAuthor">Author</label>
+            <input type="title" class="form-control" id="inputAuthor" placeholder="Author">
+        </div>
+      </form>  
+<br>
+      <div class="container">
+        <form class= "form-inline">
+          <div class="mt-3">
+            <p>Upload Files:</p>
+            <input type="file" id="myFile" name="filename2"><br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div> 
+    
+          <form class="form-inline">
+            <div>
+              <h2>Pages</h2>
+              <label style="color:lime;"for="sel1"><p>Academics</p></label>
+                <select class="form-control" id="sel1">
+                  <option>Computer Science</option>
+                  <option>Engineering</option>
+                  <option>Psychology</option>
+                  <option>Medical</option>
+                </select>
+            </div>
+          </form>
+        </form>
+      </div>
+<br>
+      <div class="form-group">
+        <h2>Text</h2>
+        <input style="height:500px;width:500px;" class="form-control" type="text">
+      </div>
+<br>
+      <p>Select Tags</p>
+      <div class="container">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="python" value="option1">
+          <label class="form-check-label" for="python">Python</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="C++" value="option2">
+          <label class="form-check-label" for="C++">C++</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="java" value="option3">
+          <label class="form-check-label" for="java">Java</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="scala" value="option3">
+          <label class="form-check-label" for="scala">Scala</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Perl" value="option3">
+          <label class="form-check-label" for="Perl">Perl</label>
+        </div>
+      </div>
+<br>
+        <p>Tag Visibility</p>  
+        <div class="container">
+          <label class="switch">
+            <input type="checkbox" id="togBtn">
+            <div class="slider round"><!--ADDED HTML -->
+              <span class="on">Public</span>
+              <span class="off">Private</span><!--END-->
+            </div>
+          </label>
+        </div>
+<br>
+      <div class="container">
+        <h2>Login to Finish Submitting</h2>
+          <form action="/action_page.php">
+            <input type="text" name="username" placeholder="Username" style="color:black">
+            <input type="password" name="password" placeholder="Password" style="color:black">
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="remember" value="rememberOption">
+              <label class="form-check-label" for="remember">Remember Me</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+
+    </div>
+
+
+    
+
+    
+    
+    <!--Add the following code if you want the name of the file appear on select -->
+    <script>  
+      $(".custom-file-input").on("change", function(){var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);});</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html> 
