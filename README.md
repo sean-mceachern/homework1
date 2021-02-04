@@ -19,7 +19,7 @@ Objectives:
  - Understand basic elements in Bootstrap
  - Use Bootstrap to create a simple and beautiful form
  
-Files: 
+Files:
 aboutMe_Homepage.html - This is my webpage. Contains some information on who I am and things I am interested in. I displayed a map with all of the countries I have travelled to colored-in. 
  
 aboutMe_with_Bootstrap.html - A stylized version of my aboutMe using bootstrap. Added functional drop down menus, stylized buttons, text boxes, headers, etc..
